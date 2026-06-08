@@ -1,0 +1,116 @@
+ // Mixins
+@mixin AnimationLink($color, $colorActive) {
+  cursor: pointer;
+  font-weight: 500;
+  color: $color;
+  display: inline-block;
+  transition: 0.3s;
+  &::after {
+    content: "";
+    position: relative;
+    z-index: 1;
+    display: block;
+    border-bottom: 1px solid;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    &::after {
+      color: $colorActive;
+      width: 100%;
+    }
+    color: $colorActive;
+  }
+}
+@mixin TooltipCenterActive() {
+  z-index: 9999;
+  opacity: 1;
+}
+// fonts
+@mixin FontUltraThin() {
+  font-family: $FontUltraThin;
+}
+
+@mixin FontThin() {
+  font-family: $FontThin;
+}
+
+@mixin FontLight() {
+  font-family: $FontLight;
+}
+
+@mixin FontRoman() {
+  font-family: $FontRoman;
+}
+
+@mixin FontMedium() {
+  font-family: $FontMedium;
+}
+
+@mixin FontBold() {
+  font-family: $FontBold;
+}
+
+//responsive mixin
+$extra_extra_large: "only screen and (max-width: 1400px)";
+$extra_large: "only screen and (max-width: 1200px)";
+$large: "only screen and (max-width: 992px)";
+$medium: "only screen and (max-width: 768px)";
+$small: "only screen and (max-width: 576px)";
+$mobile_l: "only screen and (max-width: 376px)";
+$mobile_m: "only screen and (max-width: 321px)";
+
+@mixin responsive_extra_extra_large() {
+  @media #{$extra_extra_large} {
+    @content;
+  }
+}
+
+@mixin responsive_extra_large() {
+  @media #{$extra_large} {
+    @content;
+  }
+}
+
+@mixin responsive_large() {
+  @media #{$large} {
+    @content;
+  }
+}
+
+@mixin responsive_medium() {
+  @media #{$medium} {
+    @content;
+  }
+}
+
+@mixin responsive_small() {
+  @media #{$small} {
+    @content;
+  }
+}
+
+@mixin responsive_mobile_l() {
+  @media #{$mobile_l} {
+    @content;
+  }
+}
+
+@mixin responsive_mobile_m() {
+  @media #{$mobile_m} {
+    @content;
+  }
+}
+
+@mixin column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin row() {
+  display: flex;
+  flex-direction: row;
+}

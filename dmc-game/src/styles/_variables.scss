@@ -1,0 +1,75 @@
+// Variables
+
+// font-family
+$fonts-base: "Helvetica Neue", "Helvetica", "Arial",
+  "メイリオ, meiryo", "ヒラギノ角ゴ pro w3",
+  "hiragino kaku gothic pro", "sans-serif";
+$fontUltraThin: "HelveticaNeueW01-UltLt", "HelveticaNeueW02-UltLt",
+  "HelveticaNeueW10-25UltL", $fonts-base;
+$FontThin: "HelveticaNeueW01-Thin", "HelveticaNeueW02-Thin",
+  "HelveticaNeueW10-35Thin", $fonts-base;
+$FontLight: "HelveticaNeueW01-45Ligh", "HelveticaNeueW02-45Ligh",
+  "HelveticaNeueW10-45Ligh", $fonts-base;
+$FontRoman: "HelveticaNeueW01-55Roma", "HelveticaNeueW02-55Roma",
+  "HelveticaNeueW10-55Roma", $fonts-base;
+$FontMedium: "HelveticaNeueW01-65Medi", "HelveticaNeueW02-65Medi",
+  "HelveticaNeueW10-65Medi", $fonts-base;
+$FontBold: "HelveticaNeueW01-75Bold", "HelveticaNeueW02-75Bold",
+  "HelveticaNeueW10-75Bold", $fonts-base;
+
+// Color system
+// scss-docs-start gray-color-variables
+$white: #ffffff !default;
+$black: #000000 !default;
+// scss-docs-end gray-color-variables
+// scss-docs-start color-variables
+$inputFocus: rgba(0, 0, 0, 0.4);
+$gray: rgb(204, 204, 204) !default;
+$shadow: rgba(0, 0, 0, 0.1);
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #cc2f3c !default;
+$orange: #fd7e14 !default;
+$yellow: #edae20 !default;
+$green: #198754 !default;
+$teal: #15b686 !default;
+$cyan: #0dcaf0 !default;
+$blueBackground: #002562 !default;
+$hoverButton: #8a6b23 !default;
+// scss-docs-end theme-color-variables
+//antiwhite
+$AW: #fde9cf;
+// Gray
+$D30: rgb(143, 133, 133) !default;
+$D60: rgb(204, 204, 204) !default;
+$D80: rgb(236, 236, 236) !default;
+$gray-700: #4b4b4b !default;
+$B40: #daeffe !default;
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
