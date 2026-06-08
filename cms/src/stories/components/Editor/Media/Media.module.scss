@@ -1,0 +1,36 @@
+@import "../../../Assets/Styles/variables";
+@import "../../../Assets/Styles/mixins";
+
+.Media {
+  min-width: 75% !important;
+  .NoData {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+      margin: 0;
+    }
+  }
+  .WarpChildren {
+    min-height: 50vh;
+  }
+  .UploadButton {
+    margin-top: 20px;
+    border: 1px $B10 dashed;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: $B10;
+    .InputFile {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+}

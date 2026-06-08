@@ -1,0 +1,13 @@
+.Pagination {
+  :global {
+    .ant-pagination-item-link {
+      border-radius: 99px;
+    }
+    .ant-pagination-item {
+      border-radius: 99px;
+    }
+    .ant-select-selector {
+      border-radius: 99px;
+    }
+  }
+}

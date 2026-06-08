@@ -1,0 +1,16 @@
+@import "../../../Assets/Styles/variables";
+.Form {
+  .WarpForm {
+    margin: 0 -15px;
+    .WarpChild {
+      padding: 0 15px;
+      .CustomeDivider {
+        border-top: 1px solid rgba($color: $black, $alpha: 0.1);
+        margin: 21px 0 12px;
+      }
+    }
+    .shapeRound {
+      border-radius: 30px;
+    }
+  }
+}

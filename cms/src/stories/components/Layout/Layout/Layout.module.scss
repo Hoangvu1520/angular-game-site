@@ -1,0 +1,27 @@
+@import "../../../Assets/Styles/variables";
+.Layout {
+  min-height: 100vh;
+  :global {
+    .ant-menu-submenu-title,
+    .ant-menu-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .Notification {
+    position: absolute;
+    border-radius: 9999px;
+    background-color: $red;
+    height: 10px;
+    width: 10px;
+    top: 13px;
+    right: -7px;
+  }
+  .IconNotify {
+    border-radius: 9999px;
+    font-size: 20px !important;
+  }
+}
+.UnAuth {
+  background-color: #002562;
+}

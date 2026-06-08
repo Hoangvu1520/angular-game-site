@@ -1,0 +1,79 @@
+@import "../../../Assets/Styles/variables";
+@import "../../../Assets/Styles/mixins";
+.Upload {
+  .UploadButton,
+  .WarpImage {
+    height: 85px;
+    width: 85px;
+    border-radius: 9px;
+    margin: 5px;
+    position: relative;
+  }
+
+  .Image {
+    position: static;
+    display: block;
+    object-fit: contain;
+  }
+
+  .ListImage {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+
+    .WarpImage {
+      border: 1px solid $B10;
+      padding: 5px;
+      transition: 0.3s;
+
+      .EffectHover {
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+      .WarpAction {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        margin: 0 -3px;
+        .Action {
+          color: $white;
+          margin: 0 3px;
+          opacity: 0.4;
+          transition: 0.3s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover {
+        .EffectHover {
+          background-color: rgba($color: $black, $alpha: 0.6);
+        }
+        .Image {
+          opacity: 0.4;
+        }
+        .WarpAction {
+          opacity: 1;
+        }
+      }
+    }
+    .HightLight {
+      border: 5px solid $G10;
+    }
+  }
+}
+.EffectHover,
+.WarpImagePreview,
+.Image {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+.WarpImagePreview {
+  padding-top: 30px;
+}

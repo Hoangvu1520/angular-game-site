@@ -1,0 +1,47 @@
+@import "../../../Assets/Styles/variables";
+.Checkbox {
+  background-color: $white;
+  border-radius: 15px;
+  padding: 18px 30px 25px;
+  .Divider {
+    margin: 15px -30px;
+    min-width: calc(100% + 60px);
+  }
+  .vertical,
+  .horizontal {
+    margin: -10px -20px;
+    .WarpCheckbox {
+      padding: 10px 20px;
+      margin: 0px -20px;
+      flex-flow: unset;
+      .CheckboxCol {
+        padding: 0px 20px;
+        .Check {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+  .vertical {
+    flex-direction: column;
+  }
+
+  .WarpAddButton {
+    cursor: pointer;
+    transition: 0.3s;
+    .NewItem {
+      padding-right: 5px;
+    }
+    &:hover {
+      color: $B10;
+    }
+  }
+  .Input {
+    margin-right: -30px;
+  }
+}

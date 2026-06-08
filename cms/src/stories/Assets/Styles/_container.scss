@@ -1,0 +1,38 @@
+@mixin min($bp, $device: "screen") {
+  @media only #{$device} and (max-width: #{$bp}) {
+    @content;
+  }
+}
+
+@function bp($bp) {
+  @return map-get($breakpoints, $bp);
+}
+
+$breakpoints: (
+  xs: 376px,
+  sm: 576px,
+  md: 760px,
+  lg: 990px,
+  xl: 1200px,
+  xxl: 1800px,
+);
+
+@function container($container-size, $true-val: false) {
+  @return map-get($container-sizes, $container-size);
+}
+
+$container-sizes: (
+);
+
+.container {
+  &:not(.is-fluid) {
+    margin: 0 auto;
+    padding: 0 70px;
+    @each $bp, $container-size in $container-sizes {
+      @include min(#{bp(#{$bp})}) {
+        width: 100%;
+        max-width: container(#{$bp});
+      }
+    }
+  }
+}

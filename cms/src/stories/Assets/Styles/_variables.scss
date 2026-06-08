@@ -1,0 +1,159 @@
+// Variables
+
+// font-family
+$fonts-base: "Helvetica Neue", "Helvetica", "Arial", "メイリオ, meiryo",
+  "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", "sans-serif";
+$fontUltraThin: "HelveticaNeueW01-UltLt", "HelveticaNeueW02-UltLt",
+  "HelveticaNeueW10-25UltL", $fonts-base;
+$FontThin: "HelveticaNeueW01-Thin", "HelveticaNeueW02-Thin",
+  "HelveticaNeueW10-35Thin", $fonts-base;
+$FontLight: "HelveticaNeueW01-45Ligh", "HelveticaNeueW02-45Ligh",
+  "HelveticaNeueW10-45Ligh", $fonts-base;
+$FontRoman: "HelveticaNeueW01-55Roma", "HelveticaNeueW02-55Roma",
+  "HelveticaNeueW10-55Roma", $fonts-base;
+$FontMedium: "HelveticaNeueW01-65Medi", "HelveticaNeueW02-65Medi",
+  "HelveticaNeueW10-65Medi", $fonts-base;
+$FontBold: "HelveticaNeueW01-75Bold", "HelveticaNeueW02-75Bold",
+  "HelveticaNeueW10-75Bold", $fonts-base;
+
+// Color system
+// scss-docs-start gray-color-variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f0f0f0 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #707070 !default;
+$gray-700: #4B4B4B !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start General-color-variables
+$D10: #162d3d !default;
+$D20: #32536a !default;
+$D30: #577083 !default;
+$D40: #7a92a5 !default;
+$D50: #b6c1cd !default;
+$D55: #cbd3dc !default;
+$D60: #dfe5eb !default;
+$D70: #f0f4f7 !default;
+$D80: #ffffff !default;
+// scss-docs-end General-color-variables
+
+// scss-docs-start blue-color-variables
+$B00: #0289FA !default;
+$B05: #308ddd !default;
+$B10: #3899ec !default;
+$B20: #4eb7f5 !default;
+$B30: #c1e4fe !default;
+$B40: #daeffe !default;
+$B50: #eaf7ff !default;
+$B60: #f4fafe !default;
+// scss-docs-end blue-color-variables
+
+// scss-docs-start red-color-variables
+$R00: #d6453d !default;
+$R05: #d8504c !default;
+$R10: #ee5951 !default;
+$R20: #f66 !default;
+$R30: #ffd7d7 !default;
+$R40: #ffe1e1 !default;
+$R50: #ffebeb !default;
+$R60: #fff5f5 !default;
+// scss-docs-end red-color-variables
+
+// scss-docs-start purple-color-variables
+$P00: #8e21b1 !default;
+$P10: #aa4dc8 !default;
+$P20: #cd68ed !default;
+$P30: #e5c9ee !default;
+$P40: #eedbf4 !default;
+$P50: #faeeff !default;
+$P60: #faf7fc !default;
+// scss-docs-end purple-color-variables
+
+// scss-docs-start green-color-variables
+$G00: #44823f !default;
+$G05: #61ad5a !default;
+$G10: #60bc57 !default;
+$G20: #80c979 !default;
+$G30: #c9eebc !default;
+$G40: #def4d4 !default;
+$G50: #edf9e5 !default;
+$G60: #f2fbef !default;
+// scss-docs-end green-color-variables
+
+// scss-docs-start yellow-color-variables
+$Y00: #c68801 !default;
+$Y05: #eda200 !default;
+$Y10: #fdb10c !default;
+$Y20: #fac249 !default;
+$Y30: #fef0ba !default;
+$Y40: #fef4cd !default;
+$Y50: #fdf7df !default;
+$Y60: #fffcf0 !default;
+// scss-docs-end yellow-color-variables
+
+// scss-docs-start Orange-color-variables
+$O00: #ea5f0e !default;
+$O10: #fb7d33 !default;
+$O20: #ff9a48 !default;
+// scss-docs-end Orange-color-variables
+
+// scss-docs-start Focus-color-variables
+$F00: #aadbfc !default;
+// scss-docs-end Focus-color-variables
+
+// scss-docs-start theme-color-variables
+$general: $D10 !default;
+$primary: $B00 !default;
+$destructive: $R00 !default;
+$premium: $P00 !default;
+$success: $G00 !default;
+$warning: $Y00 !default;
+$urgent: $O00 !default;
+$misc: $F00 !default;
+// scss-docs-end theme-color-variables
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root: null !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+// scss-docs-end font-variables

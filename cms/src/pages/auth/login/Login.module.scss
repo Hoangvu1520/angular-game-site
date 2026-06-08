@@ -1,0 +1,42 @@
+@import "../../../assets/Styles/variables";
+.Login {
+  border-radius: 30px;
+  width: 40%;
+  margin: 100px auto;
+  padding: 20px;
+  .Header {
+    .Title {
+      font-size: 24px;
+      color: $white;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+  .ErrorText {
+    color: red;
+    font-size: 18px;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+  }
+
+  .ButtonSubmit {
+    background-color: #edae20;
+    color: $black;
+    width: 100%;
+    font-weight: 700;
+    height: 60px;
+    font-size: 24px;
+    &:hover {
+      background-color: #8a6b23 !important;
+      color: $black !important;
+    }
+  }
+  .Input {
+    background-color: #002562;
+    color: $white;
+    &::placeholder {
+      color: rgba($color: $white, $alpha: 0.3);
+    }
+    height: 60px;
+  }
+}

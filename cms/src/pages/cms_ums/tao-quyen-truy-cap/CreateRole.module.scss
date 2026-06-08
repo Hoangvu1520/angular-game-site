@@ -1,0 +1,17 @@
+.FormItem {
+    background-color: white;
+    padding: 18px 30px 36px;
+    border-radius: 18px;
+  }
+  
+  .FormSelect {
+    background-color: white;
+    padding: 18px 5px 20px 10px;
+    border-radius: 18px;
+    :global {
+      .ant-select {
+        height: 78px;
+      }
+    }
+  }
+  

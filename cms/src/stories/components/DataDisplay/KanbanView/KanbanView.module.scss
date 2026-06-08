@@ -1,0 +1,42 @@
+@import "../../../Assets/Styles/variables";
+
+.KanbanView {
+  margin: -20px -20px 15px;
+  .WarpItem {
+    .Item {
+      padding: 20px;
+      margin: 20px;
+      background-color: $white;
+      border-radius: 18px;
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      .WarpIcon {
+        font-size: 60px;
+        color: $B10;
+        margin: 0 20px;
+      }
+      .Title {
+        font-weight: 400;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .Content {
+        color: $gray-600 !important;
+      }
+      .Button {
+        border: 1px solid transparent;
+        color: $B10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: $B10;
+          color: $white;
+        }
+      }
+    }
+  }
+}

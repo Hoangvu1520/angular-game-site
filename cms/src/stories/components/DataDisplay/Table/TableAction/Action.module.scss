@@ -1,0 +1,15 @@
+.ButtonDelete {
+  padding: 0 50px !important;
+  margin-left: 15px;
+}
+.ButtonTooltip {
+  button {
+    border-color: transparent;
+    &:hover {
+      border-color: transparent !important;
+    }
+    &:focus-visible {
+      border-color: transparent !important;
+    }
+  }
+}

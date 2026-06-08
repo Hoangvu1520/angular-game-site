@@ -1,0 +1,19 @@
+@import "../../../Assets/Styles/variables";
+.ColorPicker {
+  
+  padding: 15px 0;
+
+  .ColorButton {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .PickColor{
+    position: absolute;
+    z-index: 2;
+  }
+}

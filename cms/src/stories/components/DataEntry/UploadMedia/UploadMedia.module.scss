@@ -1,0 +1,25 @@
+@import "../../../Assets/Styles/variables";
+@import "../../../Assets/Styles/mixins";
+
+.Show {
+  display: flex;
+  flex-direction: row;
+
+  .Warp {
+    margin: -10px;
+    .Col {
+      margin: 10px;
+    }
+  }
+  .Button {
+    height: 85px;
+    width: 85px;
+    border: 1px $B10 dashed;
+    border-radius: 9px;
+    overflow: hidden;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: $B10;
+  }
+}

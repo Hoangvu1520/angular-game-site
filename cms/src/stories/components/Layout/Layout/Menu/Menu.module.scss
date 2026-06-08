@@ -1,0 +1,45 @@
+@import "../../../../Assets/Styles/variables";
+
+.ActionMenu {
+  flex-direction: column;
+
+  .AppHeader {
+    font-weight: 400;
+    color: $white !important;
+  }
+}
+
+.ant-layout-sider-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-menu-item-group-title {
+  height: unset;
+}
+
+.ant-layout-sider-children {
+  max-height: calc(100vh - 65px) !important;
+}
+
+.CustomeSubMenu {
+  left: 42px !important;
+  top: 64px !important;
+
+  :global {
+    .ant-menu-sub {
+      max-height: calc(100vh - 64px) !important;
+      min-height: calc(100vh - 64px);
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}
+
+.MainMenu {
+  :global {
+    .ant-menu-submenu-arrow {
+      display: none;
+    }
+  }
+}

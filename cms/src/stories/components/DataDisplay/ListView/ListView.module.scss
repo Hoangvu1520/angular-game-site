@@ -1,0 +1,33 @@
+@import "../../../Assets/Styles/variables";
+.ListView {
+  .Table {
+    border-radius: 18px;
+    overflow: hidden;
+    thead {
+      background-color: rgba($color: $B10, $alpha: 0.2);
+    }
+    :global {
+      .ant-table-body {
+        overflow-y: auto !important;
+      }
+    }
+  }
+  .Button {
+    border: 1px solid transparent;
+    color: $B10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: $B10;
+      color: $white;
+    }
+  }
+  .WarpButtonDelete {
+    margin-bottom: 15px;
+    .ButtonDelete {
+      padding: 0 50px;
+      margin-left: 15px;
+    }
+  }
+}

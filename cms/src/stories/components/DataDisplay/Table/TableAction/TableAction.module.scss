@@ -1,0 +1,46 @@
+@import "../../../../Assets/Styles/variables";
+@mixin border($radius, $colorBorder) {
+  border: 2px solid $colorBorder;
+  border-radius: $radius;
+}
+@mixin hover() {
+  &:hover {
+    border: 2px solid $B10;
+  }
+}
+.TableAction {
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 30px;
+  .WarpRight {
+    display: flex;
+    align-items: center;
+    .CustomeInput {
+      // @include border(21px, rgba($color: $B10, $alpha: 0.2));
+      // box-shadow: none;
+      // @include hover();
+      .prefixIcon,
+      .suffixIcon {
+        font-size: 20px;
+        color: $B10;
+      }
+      .suffixIcon {
+        border-radius: 999px;
+        background-color: rgba($color: $B10, $alpha: 0.1);
+      }
+    }
+    // :global {
+    //   .ant-input-affix-wrapper-focused {
+    //     border: 2px solid $B10;
+    //   }
+    // }
+    .CustomeSegmented {
+      :global {
+        .ant-segmented-item-label {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

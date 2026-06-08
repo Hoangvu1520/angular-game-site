@@ -1,0 +1,52 @@
+@import "../../../Assets/Styles/variables";
+@import "../../../Assets/Styles/mixins";
+.ImageCard {
+  border-radius: 9px;
+  margin: 5px;
+  position: relative;
+  height: 250px;
+  .EffectHover,
+  .Image {
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    transition: 0.3s;
+  }
+
+  .Image {
+    position: static;
+    display: block;
+    object-fit: cover;
+  }
+  .WarpAction {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    margin: 0 -3px;
+    font-size: 30px;
+    .Action {
+      color: $white;
+      margin: 0 3px;
+      opacity: 0.4;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.HightLight {
+  &:hover {
+    .EffectHover {
+      background-color: rgba($color: $black, $alpha: 0.6);
+    }
+    .Image {
+      opacity: 0.4;
+    }
+    .WarpAction {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../Assets/Styles/variables";
+@import "../../../Assets/Styles/mixins";
+.HeaderPage {
+  background-color: $white;
+  min-height: 100px;
+  height: unset;
+  margin-bottom: 30px;
+  padding: 0;
+  .WarpTypographyHeader {
+    .TitleHeader,
+    .ContentHeader {
+      font-weight: 400;
+    }
+  }
+  .WarpButton {
+    display: flex;
+    margin: 0 -20px;
+    .ButtonCustomeStyle {
+      margin: 10px 20px;
+    }
+  }
+}
+.Background {
+  background-color: transparent;
+}
