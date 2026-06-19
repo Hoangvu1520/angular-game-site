@@ -165,7 +165,13 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <app-header></app-header>
-
+<div class="container">
+  <div *ngIF="items.length === 0; then noItems; else showItems"></div>
+  <ng-template #noItems><p>There are no taks today</p></ng-template>
+  <ng-template #showItem>
+    <div *ngFor="let item of items">{{ item.task }}</div></ng-template
+  >
+</div>
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>
