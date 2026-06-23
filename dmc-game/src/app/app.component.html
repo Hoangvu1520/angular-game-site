@@ -165,13 +165,27 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <app-header></app-header>
-<div class="container">
-  <div *ngIf="items.length === 0; then noItems; else showItems"></div>
-  <ng-template #noItems><p>There are no taks today</p></ng-template>
-  <ng-template #showItems>
-    <div *ngFor="let item of items">{{ item.task }}</div></ng-template
-  >
+<div *ngIf="items.length === 0; else showItems">
+  There are no wishes to display.
 </div>
+
+<ng-template #showItems>
+  <ul class="wish-list">
+    <li *ngFor="let item of items; index as ii">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input
+            class="checkbox"
+            type="checkbox"
+            [checked]="item.completed"
+            [attr.data-index]="ii"
+          />
+          {{ item.task }}
+        </label>
+      </div>
+    </li>
+  </ul>
+</ng-template>
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>
