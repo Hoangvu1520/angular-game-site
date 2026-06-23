@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Renderer2 } from '@angular/core';
+import {
+  Component,
+  Input,
+  Renderer2,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { NgControl } from '@angular/forms';
 
 @Component({
@@ -16,7 +22,7 @@ export class InputComponent {
   @Input() type?: 'text' | 'password' | 'number' | 'email' | 'phone-number' =
     'text';
   @Input() isRounded?: boolean;
-
+  @Output() valueChange = new EventEmitter<string>();
   onInputChange(e: Event) {
     const target = e.target as HTMLInputElement;
     this.value = target.value;

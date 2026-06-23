@@ -37,6 +37,7 @@ export class AppComponent {
     new WishList('Find grass that cuts itself'),
   ];
   title = 'Home';
+  showingText = "";
   toggleItem(item: WishList) {
     console.log(item.task);
   }
