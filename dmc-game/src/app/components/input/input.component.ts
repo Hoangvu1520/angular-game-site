@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, Renderer2 } from '@angular/core';
 import { NgControl } from '@angular/forms';
 
-export type InputType = 'text' | 'email' | 'phoneNumber';
-
 @Component({
   selector: 'app-input',
   standalone: true,
@@ -12,16 +10,15 @@ export type InputType = 'text' | 'email' | 'phoneNumber';
   styleUrl: './input.component.scss',
 })
 export class InputComponent {
+  @Input() value?: string | null = '';
   @Input() isRequired?: boolean;
-  @Input() placeholderText: string = '';
-  @Input() inputType: InputType = 'text';
+  @Input() placeholder: string = '';
+  @Input() type?: 'text' | 'password' | 'number' | 'email' | 'phone-number' =
+    'text';
+  @Input() isRounded?: boolean;
 
-  public value: any;
-  private onChange = (value: any) => {};
-  private onTouched = () => {};
-
-  constructor(
-    private renderer: Renderer2,
-    public ngControl: NgControl,
-  ) {}
+  onInputChange(e: Event) {
+    const target = e.target as HTMLInputElement;
+    this.value = target.value;
+  }
 }

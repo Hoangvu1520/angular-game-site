@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/Layout';
 import { HomeComponent } from './pages/home/home.component';
 import { WishList } from './shared/models/wishList';
 import { CommonModule } from '@angular/common';
+import { InputComponent } from './components';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     HomeComponent,
     CommonModule,
+    InputComponent
   ],
   templateUrl: './app.component.html',
   //   template:`
@@ -35,4 +37,7 @@ export class AppComponent {
     new WishList('Find grass that cuts itself'),
   ];
   title = 'Home';
+  toggleItem(item: WishList) {
+    console.log(item.task);
+  }
 }

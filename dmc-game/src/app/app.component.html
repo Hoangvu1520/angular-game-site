@@ -168,7 +168,7 @@
 <div *ngIf="items.length === 0; else showItems">
   There are no wishes to display.
 </div>
-
+<app-input/>
 <ng-template #showItems>
   <ul class="wish-list">
     <li *ngFor="let item of items; index as ii">
@@ -179,6 +179,7 @@
             type="checkbox"
             [checked]="item.completed"
             [attr.data-index]="ii"
+            (click)="toggleItem(item)"
           />
           {{ item.task }}
         </label>

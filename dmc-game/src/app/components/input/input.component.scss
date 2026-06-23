@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+
+.input {
+  width: 100%;
+  border: 1px $gray solid;
+  border-radius: 30px;
+  padding: 5px 10px;
+  input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+  }
+}
