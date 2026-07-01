@@ -1,4 +1,4 @@
-export const requestAPI = async (url: string, body: any, mothod: "POST" | "GET" | "PUT" | "PATCH" | "DELETE") => {
+export const httpHandler = async (url: string, body: any, method: "POST" | "GET" | "PUT" | "PATCH" | "DELETE") => {
     const token = localStorage.getItem("accessToken");
     const response = await fetch(process.env.NEXT_PUBLIC_BASE_API + url,
         {
@@ -12,4 +12,12 @@ export const requestAPI = async (url: string, body: any, mothod: "POST" | "GET" 
             credentials: 'include',
             body: method == "GET" ? undefined : JSON.stringify(body),
         })
+    const result = await response.json()
+    if (result?.error) {
+        throw result.error
+    }
+
+    return result;
 };
+
+export default httpHandler;
