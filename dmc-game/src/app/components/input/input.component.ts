@@ -1,26 +1,30 @@
-import { Component, Input, Renderer2 } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  Component,
+  Input,
+  Renderer2,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { NgControl } from '@angular/forms';
-
-export type InputType = "text" | "email" | "phoneNumber"
 
 @Component({
   selector: 'app-input',
-  standalone:true,
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.scss'
+  styleUrl: './input.component.scss',
 })
-
 export class InputComponent {
+  @Input() value?: string | null = '';
   @Input() isRequired?: boolean;
-  @Input() placeholderText: string = '';
-  @Input() inputType: InputType = 'text';
-
-  public value: any;
-  private onChange = (value: any) => {};
-  private onTouched = () => {};
-
-  constructor(private renderer:Renderer2, public ngControl: NgControl){
-    
+  @Input() placeholder: string = '';
+  @Input() type?: 'text' | 'password' | 'number' | 'email' | 'phone-number' =
+    'text';
+  @Input() isRounded?: boolean;
+  @Output() valueChange = new EventEmitter<string>();
+  onInputChange(e: Event) {
+    const target = e.target as HTMLInputElement;
+    this.value = target.value;
   }
 }

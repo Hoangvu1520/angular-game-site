@@ -3,25 +3,42 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/Layout';
 import { HeaderComponent } from './components/Layout';
 import { HomeComponent } from './pages/home/home.component';
-import { WishItem } from '../shared/models/wishList';
+import { WishList } from './shared/models/wishList';
+import { CommonModule } from '@angular/common';
+import { InputComponent } from './components';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, HomeComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    CommonModule,
+    InputComponent
+  ],
   templateUrl: './app.component.html',
-//   template: `
-//   <main>
-//     <header class="brand-name">
-//       <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-//     </header>
-//     <section class="content">
-//       <app-home></app-home>
-//     </section>
-//   </main>
-// `,
-  styleUrl: './app.component.scss'
+  //   template:`
+  //   <main>
+  //     <header class="brand-name">
+  //       <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+  //     </header>
+  //     <section class="content">
+  //       <app-home></app-home>
+  //     </section>
+  //   </main>
+  // `,
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  items = [new WishItem("hello"), new WishItem("hi", true), new WishItem("goodbye")];
+  items: WishList[] = [
+    new WishList('Learn Angular'),
+    new WishList('Get Coffee', true),
+    new WishList('Find grass that cuts itself'),
+  ];
   title = 'Home';
+  showingText = "";
+  toggleItem(item: WishList) {
+    console.log(item.task);
+  }
 }
