@@ -24,5 +24,65 @@ server.register(fastifyCookie, {
   secret: "my-secret", // dùng để ký mã hóa cookie nếu dùng signed cookies
 });
 
+// Đăng ký CORS
+server.register(fastifyCors, {
+  origin: (origin, callback) => {
+    if (corsWhiteList.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error(`Not allowed by CORS: ${origin}`));
+    }
+  },
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "Cache-Control"],
+  credentials: true,
+});
+
+// Đăng ký Socket.IO
+server.register(fastifyIO, {
+  cors: {
+    origin: corsWhiteList,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  },
+});
+
+// Định nghĩa route đơn giản kiểm tra server
+server.get("/", (req, reply) => {
+  reply.send("Init success");
+});
+
+// Cấu hình WebSocket
+server.ready().then(() => {
+  server.io.on("connection", (socket) => {
+    console.log("Client connected");
+
+    socket.on("notification/send", (msg) => {
+      socket.broadcast.emit("notification/received", msg);
+    });
+  });
+});
+
+// Đăng ký các route chính của API
+server.register(Routes, {
+  prefix: "/api",
+  whiteList: corsWhiteList,
+});
+
+// Khởi động máy chủ
+const start = async () => {
+  try {
+    await server.listen({ host: ADDRESS, port: process.env.PORT });
+    console.log(
+      `🚀 Server is running on http://${ADDRESS}:${process.env.PORT}`
+    );
+
+    // Khởi động các job sau khi server đã sẵn sàng
+    // startDestroyOrderJob();
+    // startPaymentRequestCancelJob();
+  } catch (err) {
+    console.error("❌ Error starting server:", err);
+    process.exit(1);
+  }
+};
 
 start();
