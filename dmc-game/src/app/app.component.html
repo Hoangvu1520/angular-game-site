@@ -163,33 +163,33 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="layout">
+  <app-header></app-header>
+  <div class="content">
+    <div *ngIf="items.length === 0; else showItems">
+      There are no wishes to display.
+    </div>
+    <app-input />
 
-<app-header></app-header>
-<div *ngIf="items.length === 0; else showItems">
-  There are no wishes to display.
+    <ng-template #showItems>
+      <ul class="wish-list">
+        <li *ngFor="let item of items; index as ii">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                class="checkbox"
+                type="checkbox"
+                [checked]="item.completed"
+                [attr.data-index]="ii"
+                (click)="toggleItem(item)"
+              />
+              {{ item.task }}
+            </label>
+          </div>
+        </li>
+      </ul>
+    </ng-template>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>
-<app-input/>
-
-<ng-template #showItems>
-  <ul class="wish-list">
-    <li *ngFor="let item of items; index as ii">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input
-            class="checkbox"
-            type="checkbox"
-            [checked]="item.completed"
-            [attr.data-index]="ii"
-            (click)="toggleItem(item)"
-          />
-          {{ item.task }}
-        </label>
-      </div>
-    </li>
-  </ul>
-</ng-template>
-<router-outlet></router-outlet>
-
-<app-footer></app-footer> -->
-
-<div><div></div></div>
