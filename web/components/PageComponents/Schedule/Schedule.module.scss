@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+.Title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.Descriptions {
+  margin: 15px 0;
+}
+.Input {
+  width: calc(60% - 10px);
+  input {
+    color: $white;
+  }
+}
+.WarpImage {
+  height: 70%;
+  padding: 10px 0;
+  .Image {
+    position: relative !important;
+  }
+}
+.Select {
+  height: 30px;
+  width: 60%;
+  color: black;
+  margin-bottom: 10px;
+}
+.Address {
+  width: 60%;
+  padding: 10px 0;
+  line-height: 1.25rem;
+}

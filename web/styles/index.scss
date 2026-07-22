@@ -1,0 +1,25 @@
+@import "./grid";
+@import "./mixins";
+@import "./reset";
+@import "./variables";
+@import "./container";
+
+* {
+  font-family: $fonts-base !important;
+  font-weight: $font-weight-base;
+  text-decoration: none;
+}
+.ReactModal__Content {
+  // @include responsive_extra_large() {
+  //   width: calc(80% - 40px);
+  // }
+  height: 70%;
+}
+
+.ReactModal__OverLay{
+  display: hidden;
+}
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
+}

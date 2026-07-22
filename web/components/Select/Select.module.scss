@@ -1,0 +1,98 @@
+.Select {
+  width: 100%;
+  border-radius: 5px;
+
+  cursor: pointer;
+  //small select
+  .SmallSelect {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    .SelectContainer {
+      // border-radius: 5px;
+      border: 0.1px solid #ccc;
+      border-radius: 5px;
+
+      .Placeholder {
+        padding: 10px;
+        max-width: 350px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .IconOutline {
+        display: flex;
+        align-items: center;
+        background-color: #dadada;
+        font-size: 20px;
+        border-radius: 0 5px 5px 0;
+        padding: 0 6px;
+      }
+    }
+    .Options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 99.4%;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      background-color: #fff;
+      z-index: 100;
+      display: none; // Initially hide the options
+      .Option {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .Option:hover {
+        background-color: #f0f0f0;
+      }
+    }
+    &.open .Options {
+      display: block; // Show options when the dropdown is open
+    }
+  }
+  .BigSelect {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+
+    .SelectContainer {
+      border: 1px solid #ccc;
+      .Placeholder {
+        padding: 9px 10px;
+        max-width: 350px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .IconOutline {
+        font-size: 18px;
+        border-radius: 0 5px 5px 0;
+        width: 14px;
+        padding: 9px 10px;
+      }
+    }
+    .Options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 99.4%;
+      border: 1px solid #ccc;
+      border-top: none;
+      background-color: #fff;
+      z-index: 100;
+      display: none; // Initially hide the options
+      .Option {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .Option:hover {
+        background-color: #f0f0f0;
+      }
+    }
+    &.open .Options {
+      display: block; // Show options when the dropdown is open
+    }
+  }
+}

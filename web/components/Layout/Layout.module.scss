@@ -1,0 +1,207 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Layout {
+  background-color: $blueBackground;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+
+  .Dropdown {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    background-color: white;
+    border-radius: 5px;
+    width: 15%;
+    right: 10px;
+    /* Adjust this value as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    .Cash {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .Button {
+      border: transparent;
+      cursor: pointer;
+      text-align: center;
+      padding: 10px;
+
+      &:hover {
+        background-color: rgb(221, 213, 213);
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .LogoutText {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .Header {
+    // margin-left: 100px;
+    color: $white;
+    padding: 15px;
+    background-color: #131722;
+
+    .Navigation {
+      .Title {
+        font-size: 26px;
+        font-weight: 600;
+        padding: 5px 0 5px 13px;
+      }
+
+      .List {
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        margin-top: 8px;
+        margin-left: 20px;
+
+        .ListItem {
+          color: $white;
+          cursor: pointer;
+          margin: 0 10px;
+          position: relative;
+
+          &:hover {
+            color: $yellow;
+          }
+        }
+
+        .Active {
+          cursor: pointer;
+          color: $yellow;
+          text-decoration: underline;
+        }
+      }
+
+      .Dropdown {
+        position: relative;
+        display: none;
+        margin: -5px 0 5px 30px;
+
+        @media (max-width: 768px) {
+          display: block;
+
+          .DropdownTitle {
+            font-size: 30px;
+
+            cursor: pointer;
+
+            // &:hover {
+            // }
+          }
+
+          &:hover {
+            .DropdownContent {
+              display: block;
+              color: $white;
+            }
+          }
+
+          .DropdownContent {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            color: $white;
+            width: 180px;
+
+            .ListItem {
+              cursor: pointer;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              background-color: $gray;
+              color: $black;
+
+              &:hover {
+                background-color: $B40;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .Notification {
+      .Cash {
+        padding-top: 10px;
+        margin-right: 20px;
+      }
+
+      .Profile {
+        position: relative;
+        height: 100%;
+
+        .UserName {
+          padding-top: 10px;
+          z-index: 1;
+          font-weight: 600;
+
+          &:hover {
+            color: $yellow;
+            cursor: pointer;
+          }
+        }
+
+        // &:hover {
+        //   .Layout.Dropdown {
+        //     position: absolute;
+        //     display: block;
+        //     z-index: 10;
+        //     background-color: white;
+        //     border-radius: 5px;
+        //     bottom:10;
+        //     height: 120px;
+        //   }
+        // }
+      }
+
+      .Icon {
+        cursor: pointer;
+        margin: 8px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .Sidebar {
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #666666;
+    overflow-x: hidden;
+    // padding-top: 30px;
+    text-align: center;
+
+    .Icon {
+      color: $white;
+      font-size: 21px;
+      margin-bottom: 50px;
+      cursor: pointer;
+
+      &:hover {
+        color: orange;
+      }
+
+      .Name {
+        margin-top: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .MainContent {
+    background-color: $blueBackground;
+    // margin-left: 100px;
+  }
+}

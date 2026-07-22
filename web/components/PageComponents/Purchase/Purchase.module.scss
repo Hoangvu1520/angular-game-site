@@ -1,0 +1,130 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.Purchase {
+  height: fit-content;
+
+  .WarpTable {
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+
+  .Title {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .Table {
+    width: 100%;
+    border-collapse: collapse;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+
+    .Cell {
+      border: 1px solid #ddd;
+      /* Border color */
+      padding: 8px;
+      /* Cell padding */
+      text-align: left;
+
+      .Select {
+        color: black;
+        height: 30px;
+        width: 170px;
+      }
+
+      .Button {
+        margin: 5px 2px;
+        background-color: $yellow;
+        border: solid 0.1px gray;
+        border-radius: 12px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-weight: 600;
+
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+
+    thead {
+      position: sticky;
+      top: -1px;
+      z-index: 2;
+    }
+
+    th {
+      background-color: #666666;
+      /* Header background color */
+      color: $white;
+      /* Header text color */
+      font-weight: bold;
+    }
+
+    .PunishContract {
+      background-color: $red;
+    }
+  }
+
+  .Pagination {
+    padding: 15px 0;
+    justify-content: end;
+
+    .WarpPage {
+      cursor: pointer;
+      padding: 5px;
+      margin: 0 5px;
+      border: 1px solid $white;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      &:active {
+        scale: 1;
+      }
+    }
+
+    .ActivePage {
+      background-color: $yellow;
+      color: $black;
+    }
+  }
+
+  .HeaderToolbar {
+    .WarpTool {
+      min-width: 200px;
+      color: $black;
+      margin: 0px 10px;
+    }
+
+    .WarpButton {
+      cursor: pointer;
+      padding: 5px;
+      margin: 0 5px;
+      border: 1px solid $white;
+
+      &:hover {
+        scale: 1.05;
+      }
+
+      &:active {
+        scale: 1;
+      }
+    }
+
+    .InputSearch {
+      background-color: $white;
+
+      input {
+        color: $black;
+      }
+    }
+
+    .SelectFilter {
+      height: calc(100% - 1px);
+    }
+  }
+}

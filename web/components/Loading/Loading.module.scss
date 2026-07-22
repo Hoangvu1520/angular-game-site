@@ -1,0 +1,26 @@
+@import "../../styles/variables";
+.Loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
+  background-color: rgba($color: $black, $alpha: 0.3);
+  .Animation {
+    font-size: 50px;
+    color: $yellow;
+    animation: rotateDot 1s infinite linear;
+    animation-play-state: running;
+  }
+}
+@keyframes rotateDot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
