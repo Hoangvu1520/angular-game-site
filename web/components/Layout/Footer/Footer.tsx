@@ -1,4 +1,14 @@
-import React from 'react'
+import React, { ReactNode, useState, useEffect } from 'react'
+
+interface section1 {
+    icon?: string;
+    title?: string;
+    content?: ReactNode;
+    link?: string;
+}
+export type FooterProps = {
+    section1?: section1[];
+};
 
 const Footer: React.FC = () => {
     //define constants
@@ -17,4 +27,4 @@ const Footer: React.FC = () => {
     )
 }
 
-export default Footer
+export { Footer }
