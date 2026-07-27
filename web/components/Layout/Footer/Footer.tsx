@@ -11,7 +11,7 @@ export type FooterProps = {
     section1?: section1[];
 };
 
-const Footer: React.FC = () => {
+const Footer: React.FC = (FooterProps: FooterProps) => {
     //define constants
 
     //functions to create
