@@ -172,7 +172,7 @@ const Input = (InputProps: InputProps) => {
       | "datetime-local"
   ) => {
     switch (type) {
-      case "text" || "email":
+      case  "email":
         return renderInputText(type, value);
       case "number":
         return renderNumber(value);

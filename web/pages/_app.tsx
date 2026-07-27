@@ -12,7 +12,7 @@ const navigation: any = [
 const App = ({ Component, pageProps }: any) => {
   const isLayoutVisible = Component.hideLayout;
   return (
-    <AuthProvider>
+    // <AuthProvider>
       <Layout
         menu={menu}
         navigation={navigation}
@@ -20,7 +20,7 @@ const App = ({ Component, pageProps }: any) => {
       >
         <Component classNames={styles.global} {...pageProps} />
       </Layout>
-    </AuthProvider>
+    // </AuthProvider>
   );
 };
 
