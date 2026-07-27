@@ -1,4 +1,5 @@
 import React, { ReactNode, useState, useEffect } from 'react'
+import styles from "./Footer.module.scss"
 
 interface section1 {
     icon?: string;
@@ -20,7 +21,20 @@ const Footer: React.FC = () => {
     //useEffect
 
     //functions to render
-
+    const feedback = () => {
+        return (
+            <div
+                className={[
+                    "row",
+                    "justify-center",
+                    "align-center",
+                    styles.FeedBack,
+                ].join(" ")}
+            >
+                <div>Phản hồi trang web? Hãy cho chúng tôi biết ▸</div>
+            </div>
+        );
+    };
     //MAIN RENDER
     return (
         <div>Footer</div>
