@@ -1,0 +1,16 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.childrenAuthen {
+  background-color: $white;
+  border-radius: 9px;
+  .headerCreateAcc {
+    font-size: large;
+    font-weight: 700;
+    padding: 0 0 15px 0;
+  }
+  .contentCreateAcc {
+    font-size: medium;
+    line-height: 1.2;
+  }
+}

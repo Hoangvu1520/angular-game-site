@@ -1,0 +1,101 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.SignIn {
+  width: 100%;
+  padding-bottom: 25px;
+  .box1 {
+    padding: 3px;
+    .Icon {
+      font-size: 45px;
+      @include responsive_small() {
+        font-size: 35px;
+      }
+    }
+    .textbox1 {
+      padding: auto 0;
+      .text1box1 {
+        font-size: medium;
+        font-weight: 600;
+      }
+      .text2box1 {
+        font-size: small;
+      }
+    }
+    .miniIcon1 {
+    }
+    .miniIcon2 {
+    }
+    &:hover {
+      .text2box1 {
+        text-decoration: underline;
+      }
+    }
+  }
+  .box2 {
+    .button1 {
+      width: 95%;
+    }
+    .button2 {
+      width: 95%;
+    }
+  }
+  .boxpoint {
+    padding: 0 5px;
+    cursor: pointer;
+    .content {
+      .titlepoint {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+      .sub_titlepoint {
+        font-size: 12px;
+      }
+    }
+    .point {
+      font-size: 14px;
+      font-weight: 600;
+      text-align: end;
+      margin: auto 0;
+      .img {
+        width: 70px;
+      }
+    }
+    &:hover {
+      .titlepoint {
+        text-decoration: underline;
+      }
+    }
+  }
+  .box3 {
+    padding: 10px 5px;
+    .Linkrow {
+      color: $black;
+      .row {
+        cursor: pointer;
+        .icon {
+          padding-top: 14px;
+          width: 18px;
+        }
+        .textbox3 {
+          .headertext {
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 5px;
+            width: 100%;
+          }
+          .contenttext {
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+        &:hover {
+          .contenttext {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

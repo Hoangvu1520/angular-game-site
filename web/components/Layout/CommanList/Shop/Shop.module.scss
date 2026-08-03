@@ -1,0 +1,12 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.Shop {
+  padding-bottom: 25px ;
+  .Header {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 0 15px 0;
+  }
+}

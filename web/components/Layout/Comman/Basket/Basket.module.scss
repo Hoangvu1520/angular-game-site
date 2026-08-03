@@ -1,0 +1,225 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.DropdownHeader1 {
+  width: fit-content;
+  .Drop {
+    padding-top: 5px;
+    width: 100%;
+    .Title {
+      height: 35px;
+      text-align: center;
+      .linkicon {
+        color: $black;
+        position: relative;
+        .totalCard {
+          position: absolute;
+          top: 0;
+          right: -2px;
+          border-radius: 50%;
+          background-color: $red;
+          color: $white;
+          width: 20px;
+          height: 20px;
+          font-size: 12px;
+          font-weight: 700;
+          .intotalCard {
+            position: absolute;
+            width: 20px;
+            top: 4px;
+            right: 1%;
+          }
+        }
+        .Outicon {
+          width: 36px;
+          margin-top: 3px;
+          @include responsive_mobile_m() {
+            margin-top: 6px;
+          }
+          .icon1 {
+            font-size: 26px;
+            @include responsive_mobile_l() {
+              font-size: 22px;
+            }
+            @include responsive_mobile_m() {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .children {
+      box-shadow: 0 0 7px $black;
+      border-radius: 6px;
+      background-color: $white;
+      @include responsive_medium() {
+        z-index: -1;
+        display: none;
+      }
+    }
+  }
+}
+
+.Basket {
+  width: 100%;
+  padding: auto;
+  .basketCard {
+    .headerCard {
+      font-size: 12px;
+      padding-top: 10px;
+    }
+    .basketProduct::-webkit-scrollbar {
+      width: 3px;
+    }
+    .basketProduct::-webkit-scrollbar-thumb {
+      background-color: $gray;
+    }
+    .basketProduct::-webkit-scrollbar-track {
+      background-color: $white;
+    }
+    .basketProduct {
+      max-height: 300px;
+      overflow: auto;
+      .basketProductList {
+        height: 60px;
+        padding: 15px 0px;
+        border-bottom: 1px solid $gray;
+        .outImg {
+          .tagImg {
+            border: 1px solid $gray;
+            height: 55px;
+            width: 55px;
+          }
+        }
+        .outContentProductList {
+          .contentProductList {
+            height: 70%;
+            width: 98%;
+            .contentProduct {
+              padding: 0;
+              .headerProductBasket {
+                @include max-lines(1,1.2);
+                color: $black;
+                font-weight: 700;
+                font-size: 12px;
+                padding: 0 5px;
+              }
+              .contentProductBasket {
+                @include max-lines(1,1.2);
+                color: $black;
+                font-size: 12px;
+                padding: 0 5px;
+              }
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            .priceProduct {
+              font-size: 13px;
+              color: $black;
+              text-align: end;
+              font-weight: 600;
+              padding-top: 0;
+            }
+          }
+          .BottomProductList {
+            align-items: end;
+            padding-left: 5px;
+            .MovetoLoves {
+              padding: 0;
+              font-size: 12px;
+              color: $blue;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            .Remove {
+              display: none;
+              padding: 0;
+              font-size: 12px;
+              color: $blue;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .BottomProductList {
+            .Remove {
+              display: unset;
+            }
+          }
+        }
+      }
+    }
+
+    .Total {
+      padding: 5px 0;
+      .Subtotal {
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .Pricetotal {
+        font-weight: 700;
+        font-size: 14px;
+        text-align: end;
+      }
+    }
+    .ButtonBuy {
+      height: 45px;
+      width: 100%;
+      background-color: $red;
+      border: none;
+      border-radius: 27px;
+    }
+  }
+  .basketEmpty {
+    .textBasketEmpty {
+      font-size: 14px;
+      font-weight: 700;
+      padding: 15px;
+    }
+    .buttonBasketEmpty {
+      .button {
+        padding: 0 15px;
+      }
+    }
+  }
+  .header {
+    font-size: medium;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+
+  .box1 {
+    font-size: small;
+    font-weight: 600;
+    text-align: center;
+  }
+  .box3 {
+    padding-top: 15px;
+    .row {
+      .icon {
+        font-size: 20px;
+      }
+      .textbox3 {
+        .headertext {
+          font-size: 12px;
+          font-weight: 600;
+        }
+        .contenttext {
+          font-size: 12px;
+        }
+      }
+      &:hover {
+        .contenttext {
+          text-decoration: underline;
+        }
+      }
+      .buttonbox3 {
+        padding: 0px;
+      }
+    }
+  }
+}

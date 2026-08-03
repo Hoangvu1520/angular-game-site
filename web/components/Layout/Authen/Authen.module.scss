@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+.Authen {
+  .HeaderAuthen{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 0;
+    font-weight: 600;
+  }
+  .Outbutton1 {
+    align-items: right;
+    .button1 {
+      width: 95%;
+    }
+  }
+  .Outbutton2 {
+    align-items: left;
+    .button2 {
+      width: 95%;
+    }
+  }
+}

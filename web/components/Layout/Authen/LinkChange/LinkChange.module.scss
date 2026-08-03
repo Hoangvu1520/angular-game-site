@@ -1,0 +1,19 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.childrenAuthen {
+  background-color: $white;
+  border-radius: 9px;
+  min-width: 400px;
+  .headerCreateAcc {
+    font-size: large;
+    font-weight: 700;
+  }
+  .contentCreateAcc {
+    font-size: medium;
+    line-height: 1.2;
+  }
+  .form{
+    padding: 10px 0;
+  }
+}

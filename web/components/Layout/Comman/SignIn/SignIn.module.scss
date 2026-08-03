@@ -1,0 +1,161 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.DropdownHeader1 {
+  width: fit-content;
+  .Drop {
+    padding: 4px 10px;
+    width: 100%;
+    .Title {
+      height: 35px;
+      .title {
+        margin-top: 3px;
+        width: max-content;
+        .Outicon1 {
+          width: 36px;
+          .icon1 {
+            font-size: 26px;
+          }
+        }
+      }
+      .textchildren {
+        font-size: 14px;
+        border-bottom: 3px solid transparent;
+        @include responsive_small() {
+          display: none;
+        }
+        .textchildrenHeader {
+          white-space: nowrap;
+          max-width: 120px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          padding-bottom: 2px;
+        }
+        .textchildrenContent {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+    .children {
+      box-shadow: 0 0 7px $black;
+      border-radius: 6px;
+      background-color: $white;
+    }
+    &:hover {
+      .textchildren {
+        border-bottom: 3px solid $black;
+      }
+    }
+  }
+}
+
+.SignIn {
+  width: 100%;
+  padding: auto;
+  .box1 {
+    padding: 3px;
+    .Icon {
+      font-size: 35px;
+    }
+    .textbox1 {
+      padding: auto 0;
+      .text1box1 {
+        font-size: 16px;
+        font-weight: 600;
+        .name {
+          max-width: 160px;
+          height: 1rem;
+          @include max-lines(1, 1rem)
+        }
+      }
+      .text2box1 {
+        font-size: 14px;
+      }
+    }
+    .miniIcon1 {
+    }
+    .miniIcon2 {
+    }
+    &:hover {
+      .text2box1 {
+        text-decoration: underline;
+      }
+    }
+  }
+  .boxpoint {
+    padding: 0 5px;
+    cursor: pointer;
+    .content {
+      .titlepoint {
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+      .sub_titlepoint {
+        font-size: 12px;
+      }
+    }
+    .point {
+      font-size: 14px;
+      font-weight: 600;
+      text-align: end;
+      margin: auto 0;
+      .img {
+        width: 70px;
+      }
+    }
+    &:hover {
+      .titlepoint {
+        text-decoration: underline;
+      }
+    }
+  }
+  .box2 {
+    .button1 {
+      width: 95%;
+    }
+    .button2 {
+      width: 95%;
+    }
+  }
+  .box3 {
+    padding: 10px 5px;
+    .Linkrow {
+      color: $black;
+      .row {
+        cursor: pointer;
+        .icon {
+          padding-top: 12px;
+          width: 18px;
+        }
+        .textbox3 {
+          .headertext {
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 5px;
+            width: 100%;
+          }
+          .contenttext {
+            font-size: 12px;
+            margin-left: 5px;
+          }
+        }
+        &:hover {
+          .headertext {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .signOut {
+    padding: 15px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

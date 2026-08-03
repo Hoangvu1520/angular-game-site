@@ -1,0 +1,140 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.DropdownHeader1 {
+  width: fit-content;
+  .Drop {
+    padding: 4px 10px;
+    width: 100%;
+    .Title {
+      height: 35px;
+      .title {
+        margin-top: 3px;
+        padding-left: 5px;
+        width: max-content;
+        .Outicon1 {
+          width: 36px;
+          .icon1 {
+            font-size: 26px;
+          }
+        }
+        
+      }
+      .textchildren {
+          font-size: 14px;
+          border-bottom: 3px solid transparent;
+          @include responsive_small(){
+            display: none;
+          }
+          .textchildrenHeader {
+            font-size: 12px;
+            padding-bottom: 2px;
+          }
+          .textchildrenContent {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+    }
+    .children {
+      box-shadow: 0 0 7px $black;
+      border-radius: 6px;
+      background-color: $white;
+    }
+    &:hover {
+      .textchildren {
+        border-bottom: 3px solid $black;
+      }
+    }
+  }
+}
+
+.Community {
+  width: 100%;
+  padding: auto;
+  .box1 {
+    padding: 3px;
+    .Icon {
+      font-size: 35px;
+    }
+    .textbox1 {
+      padding: auto 0;
+      .text1box1 {
+        font-size: medium;
+        font-weight: 600;
+      }
+      .text2box1 {
+        font-size: small;
+      }
+    }
+    .miniIcon1 {
+    }
+    .miniIcon2 {
+    }
+    &:hover {
+      .text2box1 {
+        text-decoration: underline;
+      }
+    }
+  }
+  .box2 {
+  }
+  .box3 {
+    .tagImg {
+      font-size: 10px;
+    }
+    .tagText {
+      margin: auto 0;
+      .tagText1 {
+        font-size: small;
+      }
+      .tagText2 {
+        font-size: 12px;
+      }
+    }
+
+    .tag1,
+    .tag2,
+    .tag3 {
+      &:hover {
+        .tagText1 {
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+  .box4 {
+    padding-top: 10px;
+    .headerbox4 {
+      font-size: medium;
+      font-weight: 600;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .textbox4 {
+      font-size: small;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .box5 {
+    .headerbox5 {
+      font-size: medium;
+      font-weight: 600;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .textbox5 {
+      font-size: small;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

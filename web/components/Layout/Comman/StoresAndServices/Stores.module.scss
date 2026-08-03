@@ -1,0 +1,180 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.DropdownHeader1 {
+  width: fit-content;
+  .Drop {
+    padding: 4px 10px;
+    width: 100%;
+    .Title {
+      height: 35px;
+      .title {
+        margin-top: 3px;
+        width: max-content;
+        .Outicon1 {
+          width: 36px;
+          .icon1 {
+            font-size: 26px;
+          }
+        }
+        
+      }
+      .textchildren {
+          font-size: 14px;
+          border-bottom: 3px solid transparent;
+          @include responsive_small(){
+            display: none;
+          }
+          .textchildrenHeader {
+            font-size: 12px;
+            padding-bottom: 2px;
+          }
+          .textchildrenContent {
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+    }
+    .children {
+      box-shadow: 0 0 7px $black;
+      border-radius: 6px;
+      background-color: $white;
+    }
+    &:hover {
+      .textchildren {
+        border-bottom: 3px solid $black;
+      }
+    }
+  }
+}
+
+.Stores {
+  width: 100%;
+  .box1 {
+    padding-top: 15px;
+    padding-bottom: 40px;
+    width: 50%;
+    margin: 0 auto;
+    .button {
+    }
+  }
+  .box2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    .iconChildren1 {
+      padding-right: 3px;
+      font-size: 13px;
+    }
+    .textBox1Children1 {
+      font-size: small;
+      font-weight: 600;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .box3 {
+    padding: 10px;
+    .header {
+      .header1 {
+        font-size: small;
+        font-weight: 600;
+      }
+      .headerlink {
+        text-align: right;
+        font-size: small;
+        color: $blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .tagBox3 {
+      .tagImg {
+        font-size: 10px;
+      }
+      .tagText {
+        margin: auto 0;
+        .tagText1 {
+          font-size: small;
+        }
+        .tagText2 {
+          font-size: 12px;
+        }
+      }
+
+      .tag1,
+      .tag2,
+      .tag3 {
+        &:hover {
+          .tagText1 {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Authen {
+  position: relative;
+  .childrenAuthen {
+    background-color: $white;
+    max-width: 400px;
+    min-width: 500px;
+    padding: 15px;
+    border-radius: 9px;
+    position: absolute;
+    box-shadow: 0 0 3px $black;
+    max-height: 40vw;
+    top: 22vw;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    .headerCreateAcc {
+      .textheaderCreateAcc {
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+    .contentCreateAcc {
+      font-size: small;
+    }
+    .form {
+      .row1 {
+        .input1row1 {
+          width: 46%;
+        }
+        .input2row1 {
+          width: 46%;
+        }
+      }
+
+      .row5 {
+        font-weight: 700;
+        text-align: left;
+        font-size: small;
+      }
+      .row1,
+      .row2,
+      .row3,
+      .row4,
+      .row5,
+      .row7 {
+        padding: 8px 0;
+      }
+    }
+    .bottom {
+      padding: 12px 0;
+      height: 40px;
+      width: 50%;
+      .buttonResign {
+        height: 100%;
+      }
+    }
+  }
+}

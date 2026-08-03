@@ -1,0 +1,41 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.childrenAuthen {
+  background-color: $white;
+  border-radius: 9px;
+  .headerCreateAcc {
+    font-size: large;
+    font-weight: 700;
+    padding: 0 0 30px 0;
+  }
+  .img {
+    width: 250px;
+  }
+  .contentCreateAcc {
+    font-size: small;
+    font-weight: 500;
+    padding: 8px 0;
+  }
+  .form {
+    .Input1 {
+      .Inputmini1 {
+        width: 49%;
+        padding: 8px 0;
+      }
+    }
+    .Input2 {
+      .Inputmini2 {
+        width: 100%;
+        padding: 8px 0;
+      }
+    }
+  }
+  .content1 {
+    font-size: small;
+    padding: 20px 3px;
+  }
+  .buttonResign {
+    height: 40px;
+  }
+}

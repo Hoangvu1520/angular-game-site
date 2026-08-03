@@ -1,0 +1,117 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.Community {
+  width: 100%;
+  padding-bottom: 25px ;
+  .Header {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 0 15px 0;
+  }
+  .box1 {
+    border-bottom: 2px solid $gray;
+    .Icon {
+      font-size: 55px;
+      @include responsive_small() {
+        font-size: 35px;
+      }
+    }
+    .textbox1 {
+      padding-top: 10px;
+      padding-left: 10px;
+      @include responsive_small() {
+        padding-top: 0px;
+      }
+      .text1box1 {
+        font-size: 14px;
+        font-weight: 600;
+        @include responsive_small() {
+          font-size: 12px;
+        }
+      }
+      .text2box1 {
+        font-size: 12px;
+        @include responsive_small() {
+          font-size: 9px;
+        }
+      }
+    }
+    .miniIcon1 {
+      
+    }
+    .miniIcon2 {
+    }
+    &:hover {
+      .text2box1 {
+        text-decoration: underline;
+      }
+    }
+  }
+  .box2 {
+  }
+  .box3 {
+    padding-top: 15px;
+    .tag1 {
+      padding:10px 0;
+      .tagImg {
+        width: 55px;
+        padding-right: 10px;
+      }
+      .tagText {
+        margin: auto 0;
+        .tagText1 {
+          font-size: 13px;
+          padding-bottom: 5px;
+        }
+        .tagText2 {
+          font-size: 12px;
+        }
+      }
+    }
+    .tag1,
+    .tag2,
+    .tag3 {
+      &:hover {
+        .tagText1 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .box4 {
+    padding-top: 10px;
+    .headerbox4 {
+      font-size: medium;
+      font-weight: 600;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .textbox4 {
+      font-size: small;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .box5 {
+    .headerbox5 {
+      font-size: medium;
+      font-weight: 600;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .textbox5 {
+      font-size: small;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
