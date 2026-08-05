@@ -4,7 +4,7 @@ import { Input } from "../../../Input";
 import { Button } from "../../../Button";
 import { useResetPassword } from "@nhost/nextjs";
 import { useAuthContext } from "../../../Provider/Provider";
-import constant from "../../../../constant";
+import constant from "../../../constant";
 import { LoadingAtom } from "../../../../atom";
 import { useSetRecoilState } from "recoil";
 
