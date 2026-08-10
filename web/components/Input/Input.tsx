@@ -26,7 +26,7 @@ export type InputProps = {
   onChange?: (value: string | number) => void;
   onChangeTypeEmailNumber?: (value: string) => void;
   onClick?: () => void;
-  onPressEnter?: () => void;
+  onPressEnter?: (value:string|number) => void;
   style?: CSSProperties;
   className?: string;
   disabled?: boolean;
@@ -49,7 +49,7 @@ const Input = (InputProps: InputProps) => {
   //functions to handle actions
   const handlerKeyUp = (e: any) => {
     if (e.keyCode === 13) {
-      InputProps.onPressEnter && InputProps.onPressEnter();
+      InputProps.onPressEnter && InputProps.onPressEnter(value);
     }
   };
 
