@@ -14,14 +14,9 @@ export type ButtonProps = {
   type?: "submit" | "reset" | "button" | undefined;
 };
 
-export const Button = (ButtonProps: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   //Define constant
-  const [props, setProps] = useState(ButtonProps);
-
-  //Function hook
-  useEffect(() => {
-    setProps(ButtonProps);
-  }, [ButtonProps]);
+  
 
   //Function to render
   const handelOnclick = () => {
