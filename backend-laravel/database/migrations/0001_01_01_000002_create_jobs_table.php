@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('queue')->index();
             $table->longText('payload');
             $table->unsignedSmallInteger('attempts');
-            $table->timestamps('reserved_at')->nullable();
-            $table->timestamps('available_at');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->timestamp('reserved_at')->nullable();
+            $table->timestamp('available_at');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
         });
 
         Schema::create('job_batches', function (Blueprint $table) {

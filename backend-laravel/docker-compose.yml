@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .:/var/www/html
+      - .:/backend-laravel
     environment:
       ADDRESS: 0.0.0.0
       DB_HOST: postgres
