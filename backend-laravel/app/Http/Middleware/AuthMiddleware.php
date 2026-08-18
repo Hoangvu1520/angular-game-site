@@ -13,8 +13,10 @@ class AuthMiddleware
      *
      * @param  Closure(Request): (Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    protected function redirectTo($request)
     {
-        return $next($request);
+        if (! $request->expectsJson()) {
+            return route('login');
+        }
     }
 }
