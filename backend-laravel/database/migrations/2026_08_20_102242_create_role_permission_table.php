@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tokens', function (Blueprint $table) {
+        Schema::create('role_permission', function (Blueprint $table) {
             $table->id();
-            $table->integer("code");
-            $table->interger("type");
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');;
             $table->timestamps();
-            $table->timestamp("expired_at")->nullable();
         });
     }
 
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tokens');
+        Schema::dropIfExists('role_permission');
     }
 };
