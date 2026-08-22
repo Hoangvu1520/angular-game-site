@@ -8,8 +8,8 @@ use Override;
 
 class UserResource extends JsonResource {
     #[Override]
-    public function toArray(Request $request)
+    public function toArray(Request $request):array
     {
-        return parent::toArray($request);
+        return ["user_name"=>ucfirst($this->user_name), "email"=>$this->email,];
     }
 }

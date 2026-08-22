@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -17,6 +18,6 @@ class AuthController extends Controller
         //generate JWT
         $token = $user->createToken("auth_token")->plainTextToke;
 
-        return response()->json(["success" => true, "user" => $user, "token" => $token]);
+        return response()->json(["success" => true, "user" => new UserResource($user), "token" => $token]);
     }
 }
