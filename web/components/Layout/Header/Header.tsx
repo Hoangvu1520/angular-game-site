@@ -22,7 +22,7 @@ const Header: React.FC = (props: HeaderProps) => {
     //define constants
     const [navigation, setNavigation] = useState<[]>();
     const [search, setSearch] = useState<any>("");
-    const [logo, setLogo] = useRecoilState(LogoAtom);
+    const [logo, setLogo] = useRecoilState<any>(LogoAtom);
     const [advertisement, setAdvertisement] = useState({
         color: "",
         value: "",

@@ -2,6 +2,9 @@ import type { AppProps } from "next/app";
 import styles from "../styles/index.scss";
 import { Layout } from "../components";
 import { AuthProvider } from "../components";
+import { NhostProvider, NhostClient } from "@nhost/nextjs";
+import constant from "./constant";
+import { RecoilRoot } from "recoil";
 
 const menu: any = [];
 const navigation: any = [
@@ -11,8 +14,16 @@ const navigation: any = [
 ];
 const App = ({ Component, pageProps }: any) => {
   const isLayoutVisible = Component.hideLayout;
+  const nhost = new NhostClient({
+    functionsUrl: constant.BACKEND_URL,
+    graphqlUrl: constant.BACKEND_URL,
+    authUrl: constant.BACKEND_AUTH_URL,
+    storageUrl: constant.BACKEND_S3_URL,
+  });
   return (
-    // <AuthProvider>
+    
+    <NhostProvider nhost={nhost} initial={pageProps.nhostSession}>
+      <RecoilRoot>
       <Layout
         menu={menu}
         navigation={navigation}
@@ -20,7 +31,9 @@ const App = ({ Component, pageProps }: any) => {
       >
         <Component classNames={styles.global} {...pageProps} />
       </Layout>
-    // </AuthProvider>
+      </RecoilRoot>
+      </NhostProvider>
+    
   );
 };
 
