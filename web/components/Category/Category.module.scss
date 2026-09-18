@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.outCategory {
+  cursor: pointer;
+  .Category {
+    box-shadow: 0 0 3px $black;
+    margin: 5px;
+    border-radius: 3px;
+    .outText {
+      position: relative;
+      .Text {
+        color: $black;
+        position: absolute;
+        max-width: 80%;
+        top: 5px;
+        left: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .outImage {
+      position: relative;
+      max-width: 100%;
+      .Image {
+        height: 80%;
+        max-width: 80%;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+      }
+    }
+  }
+}
+.Vertical {
+  &:hover{
+    transition: 0.2s;
+    margin-top:-3px;
+  }
+  .outText {
+    width: 100%;
+  }
+  .outImage {
+    width: 100%;
+  }
+}
+

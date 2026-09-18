@@ -49,7 +49,6 @@
             line-height: 1rem;
             width: max-content;
             max-width: 120px;
-            @include max-lines(1, 1.1);
           }
         }
       }

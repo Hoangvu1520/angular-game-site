@@ -68,7 +68,7 @@ const Community = (CommunityProps: CommunityProps) => {
         <div className={["col-10 row", styles.Icon].join(" ")}>
           <Icon
             className={[, styles.Icon].join(" ")}
-            icon={"faCircleUser"}
+            iconName={"faCircleUser"}
             type={"solid"}
           />
           <div className={[, styles.textbox1].join(" ")}>
