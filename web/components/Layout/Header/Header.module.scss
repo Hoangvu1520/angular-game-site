@@ -1,0 +1,140 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+
+.Header{
+    position: relative;
+    .Advertisement {
+    min-height: 60px;
+    .AdTitle {
+      cursor: pointer;
+      padding: 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .CommanList {
+    z-index: 4;
+    display: none;
+    @include responsive_large() {
+      display: unset;
+    }
+  }
+  .TopHeader {
+    margin: 0;
+
+    .listHomeChildren {
+      display: none;
+      position: fixed;
+      background-color: $D80;
+      padding: 10px;
+      bottom: 0;
+      left: -100vw;
+      width: calc(100vw - 30px);
+      top: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: 0.3s;
+      @include responsive_medium() {
+        display: unset;
+      }
+      .outXIcon {
+        width: 100%;
+        align-items: right;
+        text-align: right;
+        .XIcon {
+          font-size: 15px;
+        }
+      }
+      .listChildren {
+        padding-bottom: 20px;
+        .IconListChildren {
+          font-size: 27px;
+          padding-right: 10px;
+          width: 35px;
+        }
+        .TextListChildren {
+          .Text1ListChildren {
+            font-weight: 700;
+            font-size: 16px;
+          }
+          .Text2ListChildren {
+            font-size: 12px;
+            @include responsive_small() {
+              display: none;
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .Text2ListChildren {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .Active {
+      left: 0;
+      opacity: 1;
+      z-index: 3;
+    }
+    .LogoAndSreach {
+      .logo {
+        .logoImg {
+          width: 30%;
+          height: 60%;
+          @include responsive_extra_large() {
+            height: 20%;
+            width: 30%;
+          }
+        }
+      }
+      .InputSreach {
+        height: 70%;
+        width: 90%;
+        border: none;
+        background-color: $D80;
+        @include responsive_extra_large() {
+          width: 85%;
+        }
+        @include responsive_large() {
+          width: 93%;
+        }
+        @include responsive_medium() {
+          width: 85%;
+        }
+        @include responsive_mobile_l() {
+          width: 77%;
+        }
+        @include responsive_mobile_m() {
+          width: 70%;
+        }
+      }
+    }
+    .Comman {
+      .rowComman1 {
+        @include responsive_large() {
+          display: none;
+        }
+      }
+    }
+    .Comman,
+    .LogoAndSreach {
+      padding: 0;
+    }
+    .listHomeIcon {
+      display: none;
+      .listHome {
+        font-size: 20px;
+      }
+
+      @include responsive_medium() {
+        display: unset;
+      }
+    }
+  }
+  .BottomHeader {
+    background-color: $black;
+  }
+}

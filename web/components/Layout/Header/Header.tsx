@@ -87,10 +87,11 @@ const Header: React.FC = (props: HeaderProps) => {
     //MAIN RENDER
     return (
         <div className={styles.Header}>
-            <div className={["container"].join(" ")}>
+            <div className={[""].join(" ")}>
+                {renderAdvertisement()}
                 <div
                     className={[
-                        "row align-center justify-between",
+                        "container row align-center justify-between",
                         styles.TopHeader,
                     ].join(" ")}
                 >
