@@ -44,6 +44,41 @@ const Layout = ({
     email: userData?.email,
   })
 
+  const section1Footer = [
+    {
+      icon: "faLocationDot",
+      title: "Tìm kiếm của hàng",
+      content: "Chọn cửa hàng",
+      link: "#",
+    },
+    {
+      icon: "faCommentSlash",
+      title: "Hỗ trợ",
+      content: "Chat không khả dụng",
+    },
+    {
+      icon: "faTableCellsLarge",
+      title: "Tải app",
+      content: "Tải xuống",
+      link: "#",
+    },
+    {
+      icon: "faMobileScreen",
+      title: "Nhận thông báo ",
+      content: "Đăng ký Ngay",
+      link: "#",
+    },
+    {
+      icon: "faCreditCard",
+      title: "Chương trình thẻ tín dụng",
+      content: (
+        <div>
+          Giảm khi thanh toán 25%? <a>Chi tiết</a>
+        </div>
+      ),
+      link: "#",
+    },
+  ];
   //function to create
 
   //function to handle actions
@@ -69,7 +104,7 @@ const Layout = ({
     <div className={[styles.Layout].join(" ")}>
       <div className={styles.Header}><Header  /></div>
       <div className={styles.Body}>{children}</div>
-      <div className={styles.Footer}></div>
+      <div className={styles.Footer}><Footer section1={section1Footer}></Footer></div>
     </div>
   );
 };
