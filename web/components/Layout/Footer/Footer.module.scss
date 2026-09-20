@@ -1,0 +1,92 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.Footer {
+  .FeedBack {
+    background-color: $gray;
+    height: 40px;
+    font-weight: bold;
+
+    div {
+      @include AnimationLink($black, $black);
+    }
+  }
+
+  .BodyFooter {
+    padding: 48px 0 96px;
+    background-color: $black;
+    color: $gray;
+
+    .Link {
+      @include AnimationLink($gray, $white);
+    }
+
+    .Section1 {
+      .Item1 {
+        .Icon {
+          font-size: 25px;
+          padding: 0px 5px;
+        }
+      }
+    }
+
+    .Section2 {
+      .WarpLink {
+        padding: 5px 0;
+      }
+
+      .ContentSection2 {
+        padding: 12px 0;
+        flex-direction: column;
+
+        // justify-content: space-between;
+        .outInput {
+          font-size: 14px;
+          font-weight: 600;
+          margin-top: 15px;
+
+          .Input {
+            margin: 5px 5px 5px 0;
+          }
+
+          .Button {
+            height: 40px;
+            width: 80px;
+            margin-top: 5px;
+            color: $white;
+            background-color: $black;
+            border: 2px solid $white;
+          }
+        }
+
+        .Content {
+          color: $white;
+          font-size: 18px;
+          padding: 0;
+          line-height: 1.65rem;
+        }
+      }
+    }
+
+    .Section3 {
+      .WarpContentSection3 {
+        margin: 15px -15px;
+
+        .ContentSection3 {
+          padding: 0 15px;
+        }
+      }
+
+      .WarpIcon {
+        margin: 15px -15px;
+
+        .Icon {
+          cursor: pointer;
+          padding: 0 15px;
+          font-size: 25px;
+          color: white
+        }
+      }
+    }
+  }
+}
