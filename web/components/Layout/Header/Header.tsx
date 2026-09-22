@@ -56,39 +56,17 @@ const Header: React.FC = (props: HeaderProps) => {
             <Input
                 className={[styles.InputSreach].join(" ")}
                 placeholder={"Nhập sản phẩm tìm kiếm"}
-                prefix="faSearch"
+                prefix="Search"
                 value={search}
                 onPressEnter={onEnter}
             />
         );
     };
 
-    const renderAdvertisement = () => {
-        return (
-            <div
-                style={{ backgroundColor: advertisement?.color }}
-                className={[
-                    styles.Advertisement,
-                    "row align-center justify-center",
-                ].join(" ")}
-            >
-                <div
-                    onClick={() =>
-                    (window.location.href = advertisement?.link
-                        ? advertisement?.link
-                        : "")
-                    }
-                    className={styles.AdTitle}
-                    dangerouslySetInnerHTML={{ __html: advertisement?.value }}
-                />
-            </div>
-        )
-    }
     //MAIN RENDER
     return (
         <div className={styles.Header}>
             <div className={[""].join(" ")}>
-                {renderAdvertisement()}
                 <div
                     className={[
                         "container row align-center justify-between",
