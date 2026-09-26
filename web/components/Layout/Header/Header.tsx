@@ -23,11 +23,6 @@ const Header: React.FC = (props: HeaderProps) => {
     const [navigation, setNavigation] = useState<[]>();
     const [search, setSearch] = useState<any>("");
     const [logo, setLogo] = useRecoilState<any>(LogoAtom);
-    const [advertisement, setAdvertisement] = useState({
-        color: "",
-        value: "",
-        link: "",
-    });
     const { storage } = useNhostClient();
     const information = props.information;
     //functions to create
