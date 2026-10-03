@@ -6,6 +6,7 @@ import styles from "./Header.module.scss"
 import { Input } from '../../Input';
 import { CommanList } from "../CommanList";
 import { Menu } from "./Menu";
+import { Stores, Community, SignIn, Chat, Love, Basket } from "../Comman";
 
 interface infor {
     userId?: any;
@@ -38,8 +39,37 @@ const Header: React.FC = (props: HeaderProps) => {
     }, [])
     //functions to render
     const renderButtonHeader = () => {
-        return <><div className={[styles.rowComman].join(" ")}></div>
-            <div></div></>
+        return <><>
+            <div className={["col-9 row", styles.rowComman1].join(" ")}>
+                <div className={["col-4", styles.colComman1].join(" ")}>
+                    <Stores disable={true} />
+                </div>
+                <div className={["col-4", styles.colComman1].join(" ")}>
+                    <Community information={information} disable={true} />
+                </div>
+                <div className={["col-4", styles.colComman1].join(" ")}>
+                    <SignIn information={information} />
+                </div>
+            </div>
+            <div
+                className={[
+                    "col-3 row",
+                    "col-sm-12",
+                    "col-lg-12",
+                    styles.rowComman2,
+                ].join(" ")}
+            >
+                <div className={["col-4", styles.Comman4].join(" ")}>
+                    <Chat information={information} disable={true} />
+                </div>
+                <div className={["col-4", styles.Comman5].join(" ")}>
+                    <Love information={information} disable={true} />
+                </div>
+                {/* <div className={["col-4", styles.Comman6].join(" ")}>
+                    <Basket information={information} />
+                </div> */}
+            </div>
+        </></>
     }
 
     const renderLogo = () => {

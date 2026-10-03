@@ -4,7 +4,7 @@ import { Icon } from "../../../Icon";
 import { Dropdown } from "../../../Dropdown";
 import styles from "./Basket.module.scss";
 import { Button } from "../../../Button";
-import { Acount, Cart, CartDelete } from "../../../../services";
+// import { Acount, Cart, CartDelete } from "../../../../services";
 import { CartAtom, LoadingAtom } from "../../../../atom";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { useRouter } from "next/router";
@@ -294,7 +294,7 @@ const Basket = (BasketProps: BasketProps) => {
             <div className={["row", styles.row].join(" ")}>
               <Icon
                 className={["col-1", styles.icon].join(" ")}
-                icon={"faHouse"}
+                iconName={"faHouse"}
               />
               <div className={["col-11", styles.textbox3].join(" ")}>
                 <div className={["row", styles.contenttext].join(" ")}>
@@ -306,7 +306,7 @@ const Basket = (BasketProps: BasketProps) => {
             <div className={["row", styles.row].join(" ")}>
               <Icon
                 className={["col-1", styles.icon].join(" ")}
-                icon={"faTruck"}
+                iconName={"faTruck"}
               />
               <div className={["col-11", styles.textbox3].join(" ")}>
                 <div className={["row", styles.contenttext].join(" ")}>
@@ -357,7 +357,7 @@ const Basket = (BasketProps: BasketProps) => {
                       <div className={[styles.Outicon].join(" ")}>
                         <Icon
                           className={[styles.icon1].join(" ")}
-                          icon={item.icon}
+                          iconName={item.icon}
                           type={item.iconType ? item.iconType : "solid"}
                         />
                       </div>
@@ -388,7 +388,7 @@ const Basket = (BasketProps: BasketProps) => {
                       <div className={[styles.Outicon].join(" ")}>
                         <Icon
                           className={[styles.icon1].join(" ")}
-                          icon={item.icon}
+                          iconName={item.icon}
                           type={item.iconType ? item.iconType : "solid"}
                         />
                       </div>
@@ -410,7 +410,7 @@ const Basket = (BasketProps: BasketProps) => {
                       <div className={[styles.Outicon].join(" ")}>
                         <Icon
                           className={[styles.icon1].join(" ")}
-                          icon={item.icon}
+                          iconName={item.icon}
                           type={item.iconType ? item.iconType : "solid"}
                         />
                       </div>
