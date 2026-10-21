@@ -85,7 +85,7 @@ const SignIn = (SignInProps: SignInProps) => {
           <div className={["row", styles.box1].join(" ")}>
             <Icon
               className={["col-2", styles.Icon].join(" ")}
-              icon={"faCircleUser"}
+              iconName={"faCircleUser"}
               type={"solid"}
             />
             <div className={["col-10", styles.textbox1].join(" ")}>
@@ -161,7 +161,7 @@ const SignIn = (SignInProps: SignInProps) => {
                       <div className={["row", styles.row].join(" ")}>
                         <Icon
                           className={["col-1", styles.icon].join(" ")}
-                          icon={item.icon}
+                          iconName={item.icon}
                         />
                         <div
                           className={["col-11", styles.textbox3].join(
@@ -199,7 +199,7 @@ const SignIn = (SignInProps: SignInProps) => {
                       <div className={["row", styles.row].join(" ")}>
                         <Icon
                           className={["col-1", styles.icon].join(" ")}
-                          icon={item.icon}
+                          iconName={item.icon}
                         />
                         <div
                           className={["col-11", styles.textbox3].join(
@@ -262,7 +262,7 @@ const SignIn = (SignInProps: SignInProps) => {
                   <div className={[, styles.Outicon1].join(" ")}>
                     <Icon
                       className={[styles.icon1].join(" ")}
-                      icon={item.icon}
+                      iconName={item.icon}
                       type={item.iconType ? item.iconType : "solid"}
                     />
                   </div>
