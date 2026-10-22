@@ -4,6 +4,10 @@ import styles from "./Menu.module.scss";
 import { useWidth } from "../../../GlobalFunc";
 import { useNhostClient } from "@nhost/nextjs";
 
+interface menuItem {
+  
+}
+
 export type MenuProps = {
   menuItems?: any[];
 };

@@ -48,7 +48,7 @@ const Header: React.FC = (props: HeaderProps) => {
                     <Community information={information} disable={true} />
                 </div>
                 <div className={["col-4", styles.colComman1].join(" ")}>
-                    <SignIn information={information} />
+                    {/* <SignIn information={information} /> */}
                 </div>
             </div>
             <div
