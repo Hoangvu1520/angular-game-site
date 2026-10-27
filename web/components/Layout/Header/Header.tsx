@@ -21,7 +21,7 @@ export type HeaderProps = {
 
 const Header: React.FC = (props: HeaderProps) => {
     //define constants
-    const [navigation, setNavigation] = useState<[]>();
+    const [navigation, setNavigation] = useState<any[]>([]);
     const [search, setSearch] = useState<any>("");
     const [logo, setLogo] = useRecoilState<any>(LogoAtom);
     const { storage } = useNhostClient();
